@@ -17,11 +17,11 @@
 
 /* Tokyo Night Light Theme (default) */
 :root {
-  --bg-primary: #d5d6db;
-  --bg-secondary: #cbccd1;
+  --bg-primary: #e6e7ed;
+  --bg-secondary: #d5d6db;
   --text-primary: #343b58;
-  --text-secondary: #4c505e;
-  --text-muted: #9699a3;
+  --text-secondary: #40434f;
+  --text-muted: #6c6e75;
   --accent: #2959aa;
   --accent-secondary: #5a3e8e;
   --border: #9699a3;
@@ -30,11 +30,11 @@
   --sh-class: #2959aa;
   --sh-identifier: #343b58;
   --sh-sign: #6c6e75;
-  --sh-string: #485e30;
+  --sh-string: #385f0d;
   --sh-keyword: #8c4351;
-  --sh-comment: #9699a3;
+  --sh-comment: #6c6e75;
   --sh-jsxliterals: #5a3e8e;
-  --sh-property: #965027;
+  --sh-property: #0f4b6e;
   --sh-entity: #965027;
 }
 
