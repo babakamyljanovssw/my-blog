@@ -1,4 +1,5 @@
 import { formatDate, getBlogPosts } from "app/blog/utils";
+import { GiscusComments } from "app/components/giscus-comments";
 import { CustomMDX } from "app/components/mdx";
 import { baseUrl } from "app/sitemap";
 import { notFound } from "next/navigation";
@@ -104,6 +105,10 @@ export default async function Blog({
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
+
+      <section>
+        <GiscusComments />
+      </section>
     </section>
   );
 }
