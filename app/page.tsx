@@ -1,19 +1,16 @@
 import { BlogPosts } from "app/components/posts";
 
 export default function Page() {
+  const description = `I'm a software engineer specializing in building full stack web applications and some experience in mobile app development.
+  This is my blog where I share my thoughts on software development, programming languages, frameworks, and my personal projects.
+  Feel free to explore my posts and reach out if you'd like to connect!`;
+
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
-      <div className="my-8">
+      <h1 className="mb-4 text-2xl font-semibold tracking-tighter">About me</h1>
+      <p className="mb-4">{description}</p>
+      <div className="my-4">
+        <h2 className="mb-4 text-2xl font-semibold">Latest Posts</h2>
         <BlogPosts />
       </div>
     </section>

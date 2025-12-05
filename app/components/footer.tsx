@@ -26,18 +26,7 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
-            href="/rss"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-accent"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/vercel/next.js"
+            href="https://github.com/babakamyljanovssw"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">github</p>
@@ -48,10 +37,10 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
+            href="https://linkedin.com/in/babanazarkamyljanov"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
+            <p className="ml-2 h-7">linkedin</p>
           </a>
         </li>
       </ul>
