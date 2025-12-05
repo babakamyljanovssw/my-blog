@@ -1,21 +1,5 @@
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <title>External link</title>
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
+import { SiFacebook, SiGithub } from "@icons-pack/react-simple-icons";
+import { Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -28,8 +12,8 @@ export default function Footer() {
             target="_blank"
             href="https://github.com/babakamyljanovssw"
           >
-            <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
+            <SiGithub size={16} />
+            <span className="ml-2">github</span>
           </a>
         </li>
         <li>
@@ -39,8 +23,19 @@ export default function Footer() {
             target="_blank"
             href="https://linkedin.com/in/babanazarkamyljanov"
           >
-            <ArrowIcon />
-            <p className="ml-2 h-7">linkedin</p>
+            <Linkedin size={16} />
+            <span className="ml-2">linkedin</span>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-accent"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=61554392187621"
+          >
+            <SiFacebook size={16} />
+            <span className="ml-2">facebook</span>
           </a>
         </li>
       </ul>
