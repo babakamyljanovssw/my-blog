@@ -1,32 +1,96 @@
 @import 'tailwindcss';
 
+/* Tailwind v4 theme customization */
+@theme {
+  --color-background: var(--bg-primary);
+  --color-surface: var(--bg-secondary);
+  --color-foreground: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+}
+
 ::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+  background-color: #7aa2f7;
+  color: #1a1b26;
 }
 
+/* Tokyo Night Light Theme (default) */
 :root {
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  --bg-primary: #d5d6db;
+  --bg-secondary: #cbccd1;
+  --text-primary: #343b58;
+  --text-secondary: #4c505e;
+  --text-muted: #9699a3;
+  --accent: #2959aa;
+  --accent-secondary: #5a3e8e;
+  --border: #9699a3;
+
+  /* Syntax highlighting - Tokyo Night Light */
+  --sh-class: #2959aa;
+  --sh-identifier: #343b58;
+  --sh-sign: #6c6e75;
+  --sh-string: #485e30;
+  --sh-keyword: #8c4351;
+  --sh-comment: #9699a3;
+  --sh-jsxliterals: #5a3e8e;
+  --sh-property: #965027;
+  --sh-entity: #965027;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
-  html {
-    color-scheme: dark;
-  }
+/* Tokyo Night Storm Theme (commented out for now)
+.dark {
+  --bg-primary: #24283b;
+  --bg-secondary: #1a1b26;
+  --text-primary: #a9b1d6;
+  --text-secondary: #9aa5ce;
+  --text-muted: #565f89;
+  --accent: #7aa2f7;
+  --accent-secondary: #bb9af7;
+  --border: #414868;
+
+  --sh-class: #7aa2f7;
+  --sh-identifier: #c0caf5;
+  --sh-sign: #9aa5ce;
+  --sh-string: #9ece6a;
+  --sh-keyword: #f7768e;
+  --sh-comment: #565f89;
+  --sh-jsxliterals: #bb9af7;
+  --sh-property: #ff9e64;
+  --sh-entity: #ff9e64;
+
+  color-scheme: dark;
+}
+*/
+
+/* Tokyo Night Theme (darker variant) */
+.dark {
+  --bg-primary: #1a1b26;
+  --bg-secondary: #16161e;
+  --text-primary: #a9b1d6;
+  --text-secondary: #9aa5ce;
+  --text-muted: #565f89;
+  --accent: #7aa2f7;
+  --accent-secondary: #bb9af7;
+  --border: #414868;
+
+  /* Syntax highlighting - Tokyo Night */
+  --sh-class: #7aa2f7;
+  --sh-identifier: #c0caf5;
+  --sh-sign: #9aa5ce;
+  --sh-string: #9ece6a;
+  --sh-keyword: #f7768e;
+  --sh-comment: #565f89;
+  --sh-jsxliterals: #bb9af7;
+  --sh-property: #ff9e64;
+  --sh-entity: #ff9e64;
+
+  color-scheme: dark;
+}
+
+.dark ::selection {
+  background-color: #7aa2f7;
+  color: #1a1b26;
 }
 
 html {
@@ -48,11 +112,16 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all underline-offset-2 decoration-[0.1em];
+  text-decoration-color: var(--text-muted);
+}
+
+.prose a:hover {
+  text-decoration-color: var(--accent);
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
+  color: var(--text-muted);
   content: '#';
 }
 
@@ -61,7 +130,9 @@ html {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply rounded-lg overflow-x-auto py-2 px-3 text-sm;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
 }
 
 .prose code {
@@ -84,7 +155,8 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-4;
+  color: var(--text-secondary);
 }
 
 .prose h1 {
